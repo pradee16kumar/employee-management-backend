@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Employee Management Backend
 
 A comprehensive Node.js + Express backend API for employee management system with JWT authentication, CRUD operations, advanced filtering, pagination, and analytics.
@@ -101,7 +101,6 @@ Password: Admin@123456
 
 ---
 
-## API Documentation
 
 ### Base URL
 ```
@@ -304,38 +303,6 @@ GET /analytics/status-report
 Authorization: Bearer {token}
 ```
 
----
-
-## Project Structure
-
-```
-employee-management-backend/
-├── controllers/
-│   ├── authController.js
-│   ├── employeeController.js
-│   └── analyticsController.js
-├── models/
-│   ├── user.js
-│   └── Employee.js
-├── routes/
-│   ├── authRoutes.js
-│   ├── employeeRoutes.js
-│   └── analyticsRoutes.js
-├── middleware/
-│   ├── authMiddleware.js
-│   ├── errorHandler.js
-│   └── validation.js
-├── seeders/
-│   └── employeeSeeder.js
-├── utils/
-│   ├── apiResponse.js
-│   └── validators.js
-├── .env.example
-├── server.js
-└── package.json
-```
-
----
 
 ## HTTP Status Codes
 
@@ -373,102 +340,4 @@ employee-management-backend/
 
 ---
 
-## Frontend Integration
 
-### Setup Steps
-
-1. **Install dependencies**
-   ```bash
-   npm install axios react-router-dom
-   ```
-
-2. **Create API client**
-   ```javascript
-   import axios from 'axios';
-   
-   const api = axios.create({
-     baseURL: 'http://localhost:5000/api'
-   });
-   
-   api.interceptors.request.use((config) => {
-     const token = localStorage.getItem('token');
-     if (token) {
-       config.headers.Authorization = `Bearer ${token}`;
-     }
-     return config;
-   });
-   
-   export default api;
-   ```
-
-3. **Login flow**
-   - Call POST `/auth/login`
-   - Store token from response
-   - Use token in Authorization header
-
-4. **Build features**
-   - Employee list with pagination
-   - Create/Edit/Delete employees
-   - Search and filtering
-   - Analytics dashboard
-
----
-
-## Troubleshooting
-
-### MongoDB Connection Failed
-- ✓ Verify MongoDB is running
-- ✓ Check MONGO_URI in `.env`
-- ✓ Ensure network access (for cloud DB)
-
-### Token Expired
-- ✓ User needs to login again
-- ✓ Implement refresh token mechanism (optional)
-- ✓ Current token validity: 7 days
-
-### Seeder Not Working
-- ✓ Ensure MongoDB connection is active
-- ✓ Check file path is correct
-- ✓ Verify permissions to delete collections
-
----
-
-## Environment Variables
-
-Create `.env` based on `.env.example`:
-
-```env
-PORT=5000
-NODE_ENV=development
-MONGO_URI=mongodb://localhost:27017/employee-db
-JWT_SECRET=your_secret_key_here
-CLIENT_URL=http://localhost:3000
-```
-
----
-
-## Version History
-
-**v1.0.0** - Initial release  
-- ✅ Complete CRUD operations
-- ✅ JWT authentication
-- ✅ Analytics dashboard
-- ✅ Advanced filtering & pagination
-- ✅ 50 seed employees included
-
----
-
-## License
-
-ISC
-
-## Support
-
-For issues, refer to error messages in API responses or check logs in terminal.
-
----
-
-**Status:** Production Ready 🚀
-=======
-# employee-management-backend
->>>>>>> 957d4fdf5ccf36b39a4c509b2965f9c4b262e786
